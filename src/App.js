@@ -1,31 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import * as Antd from 'antd';
-import * as Mat from '@material-ui/core'
-import * as vic from 'victory'
-import * as vis from 'react-vis';
-import * as recharts from 'recharts'
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import * as Antd from "antd";
+import * as Mat from "@material-ui/core";
+import * as vic from "victory";
+import * as vis from "react-vis";
+import * as recharts from "recharts";
 
-const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
+const data = [{ name: "Page A", uv: 400, pv: 2400, amt: 2400 }];
 function App() {
+  window.alert("This is the new version! Checking for CDN purge.");
   return (
     <div className="App">
       <vic.VictoryPie />
       <Antd.Button>I'm a button</Antd.Button>
       <Mat.Button>I'm also a button</Mat.Button>
-      <vis.XYPlot
-        width={300}
-        height={300}>
-      </vis.XYPlot>
-      <recharts.LineChart width={400} height={400} data={data}>
-
-      </recharts.LineChart>
+      <vis.XYPlot width={300} height={300}></vis.XYPlot>
+      <recharts.LineChart
+        width={400}
+        height={400}
+        data={data}
+      ></recharts.LineChart>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
-    </p>
+        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -33,7 +33,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-    </a>
+        </a>
       </header>
     </div>
   );
